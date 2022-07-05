@@ -4,6 +4,7 @@
     --article--bg:#2b2b5a;
     --titulo__sombra:#2b2b27;
     --color--letra:#969749;
+    --color--borde__iluminado:#cacc3c;
     --color--letra__claro:#e4e6a4;
     --color--letra__oscuro:#1b1b0d;
 }
@@ -149,16 +150,18 @@ article{
     max-width: 1350px;
     border-left: 1px solid var(--header--bg);
     border-right: 1px solid var(--header--bg);
+    border-bottom: 2px solid var(--header--bg);
 }
 #cards{
-    padding: 10px 30px;
+    padding: 10px 24px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap; 
 }
 .card{
-    margin: 20px 10px;
-    border: 2px solid var(--color--letra); 
+    margin: 20px 28px;
+    border: 2px solid var(--color--letra);
+    box-shadow: 0px 0px 5px var(--color--borde__iluminado);
 }
 .card__img{
     max-width: 200px;
