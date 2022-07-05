@@ -1,6 +1,7 @@
 :root {
     --header--bg:#494997;
-    --aside--bg:#2b2b5a;
+    --article--bg__claro:#6363be;
+    --article--bg:#2b2b5a;
     --titulo__sombra:#2b2b27;
     --color--letra:#969749;
     --color--letra__claro:#e4e6a4;
@@ -45,7 +46,7 @@ header{
     font-weight: bold;
 }
 .header__top__seach__img img{
-    width: 32px;
+    max-width: 32px;
     background: var(--color--letra);
     border-left: 2px solid var(--titulo__sombra);
     padding: 5px;
@@ -65,7 +66,7 @@ header{
     margin-right:20px;
 }
 .header__top__buy img{
-    width: 40px;
+    max-width: 40px;
 }
 .header__bot{
     display: flex;
@@ -81,7 +82,7 @@ header{
     border-right: 1px solid var(--titulo__sombra);
 }
 .header__bot nav ul a li{
-    width: 200px;
+    width: 270px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -108,14 +109,20 @@ header{
     margin: 10px;
 }
 .noticia img{
-    width: 414px;
+    max-width: 414px;
 }
 .noticia--grande img{
-    width: 900px;
+    max-width: 900px;
 }
 .aside{
     display: flex;
     flex-direction: column;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--article--bg__claro);
 }
 .images__top{
     display: flex;
@@ -138,5 +145,50 @@ header{
     top: 36px;
 }
 article{
-    background-color: var(--aside--bg);
+    background-color: var(--article--bg);
+    max-width: 1350px;
+    border-left: 1px solid var(--header--bg);
+    border-right: 1px solid var(--header--bg);
+}
+#cards{
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; 
+}
+.card{
+    margin: 20px 10px;
+    border: 2px solid var(--color--letra); 
+}
+.card__img{
+    max-width: 200px;
+    max-height: 200px;
+    background-color: var(--color--letra);
+}
+.card__img img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    overflow: hidden;
+}
+.card__description{
+    max-width: 200px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__description button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 0px;
+    font-weight: bold;
+    background-color: var(--color--letra__oscuro);
+    color: var(--color--letra);
+}
+.card__description button:hover{
+    cursor: pointer;
+    background-color: var(--color--letra);
+    color: var(--color--letra__oscuro);
 }
