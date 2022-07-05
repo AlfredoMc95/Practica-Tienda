@@ -1,5 +1,6 @@
 :root {
     --header--bg:#494997;
+    --aside--bg:#2b2b5a;
     --titulo__sombra:#2b2b27;
     --color--letra:#969749;
     --color--letra__claro:#e4e6a4;
@@ -104,15 +105,38 @@ header{
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 10px;
+}
+.noticia img{
+    width: 414px;
+}
+.noticia--grande img{
+    width: 900px;
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+}
+.images__top{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 .texto{
     color: var(--color--letra__oscuro);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     background-color: rgba(54, 218, 54, 0.363);
     padding: 5px 10px;
-    top: 10%;
-    left: 15%;
+    top: 15%;
+    left: 20%;
     transform: translate(-50%, -50%);
+}
+.texto--grande{
+    left: 15%;
+    top: 36px;
+}
+article{
+    background-color: var(--aside--bg);
 }
