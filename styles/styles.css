@@ -4,11 +4,15 @@
     --article--bg:#2b2b5a;
     --titulo__sombra:#2b2b27;
     --color--letra:#969749;
+    --color--borde__iluminado:#cacc3c;
     --color--letra__claro:#e4e6a4;
     --color--letra__oscuro:#1b1b0d;
 }
+body{
+    height: 100%;
+}
 header{
-    min-height: 190px;
+    height: 30%;
     background-color:   var(--header--bg);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23727065' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
@@ -109,16 +113,18 @@ header{
     margin: 10px;
 }
 .noticia img{
-    max-width: 414px;
+    max-width: 358px;
 }
 .noticia--grande img{
-    max-width: 900px;
+    max-width: 950px;
 }
 .aside{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 section{
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,16 +155,18 @@ article{
     max-width: 1350px;
     border-left: 1px solid var(--header--bg);
     border-right: 1px solid var(--header--bg);
+    border-bottom: 2px solid var(--header--bg);
 }
 #cards{
-    padding: 10px 30px;
+    padding: 10px 24px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap; 
 }
 .card{
-    margin: 20px 10px;
-    border: 2px solid var(--color--letra); 
+    margin: 20px 28px;
+    border: 2px solid var(--color--letra);
+    box-shadow: 0px 0px 5px var(--color--borde__iluminado);
 }
 .card__img{
     max-width: 200px;
@@ -192,3 +200,23 @@ article{
     background-color: var(--color--letra);
     color: var(--color--letra__oscuro);
 }
+footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header--bg);
+    color: var(--color--letra);
+}
+.footer__texto{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 1350px;
+    height: 100px;
+}
+/*footer::after{
+    poner content si o si para el bejor y afeter
+    content: "algo";
+}*/
